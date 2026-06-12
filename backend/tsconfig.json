@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"lib": ["es5", "es6", "dom", "ESNext"],
+		"module": "CommonJS",
+		"target": "ESNext",
+		"outDir": "./build",
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"paths": {
+			"*": ["*"],
+			"@utils/*": ["src/utils/*"],
+			"@database/*": ["src/database/*"],
+			"@shared/*": ["src/types/*"]
+		}
+	},
+	"include": ["./**/*.ts"],
+	"exclude": ["node_modules"]
+}

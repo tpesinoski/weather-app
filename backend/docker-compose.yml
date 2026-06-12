@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  weather_db:
+    image: postgres
+    container_name: weather_db
+    restart: always
+    ports:
+      - "54321:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - weather_pgdata:/var/lib/postgresql/data
+volumes:
+  weather_pgdata:
